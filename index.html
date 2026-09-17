@@ -3,110 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Janani Login</title>
+    <title>Formspree URL Test</title>
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         body {
             margin: 0;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #ff6a88, #845ec2);
+            background: #f5f5f5;
         }
 
-        .login-box {
-            width: 350px;
-            padding: 40px;
-            background: white;
-            border-radius: 20px;
+        .container {
+            width: 90%;
+            max-width: 600px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         h1 {
-            color: #ff4081;
-            margin-bottom: 10px;
-        }
-
-        p {
-            color: #777;
             margin-bottom: 25px;
         }
 
         input {
             width: 100%;
-            padding: 14px;
-            margin: 10px 0;
-            border: 2px solid #ddd;
-            border-radius: 10px;
+            padding: 15px 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 30px;
             font-size: 16px;
             outline: none;
         }
 
-        input:focus {
-            border-color: #ff4081;
-        }
-
         button {
-            width: 100%;
-            padding: 14px;
-            margin-top: 15px;
+            margin-top: 20px;
+            padding: 12px 30px;
             border: none;
-            border-radius: 10px;
-            background: linear-gradient(90deg, #ff4081, #845ec2);
+            border-radius: 6px;
+            background: #4285f4;
             color: white;
-            font-size: 18px;
+            font-size: 16px;
             cursor: pointer;
         }
 
         button:hover {
-            opacity: 0.85;
-        }
-
-        .welcome {
-            margin-top: 20px;
-            color: #845ec2;
-            font-weight: bold;
+            background: #3367d6;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="login-box">
-        <h1> Janani</h1>
-        <p>Welcome to my website 💖</p>
+    <div class="container">
 
-        <input type="text" id="username" placeholder="Username">
+        <h1>Formspree URL Test</h1>
 
-        <input type="password" id="password" placeholder="Password">
+        <form
+            action="https://formspree.io/f/xnpnajpe"
+            method="POST">
 
-        <button onclick="login()">Login</button>
+            <input
+                type="url"
+                name="submitted_url"
+                value="https://example.com"
+                placeholder="Enter URL"
+                required>
 
-        <div class="welcome" id="message"></div>
+            <button type="submit">
+                Submit
+            </button>
+
+        </form>
+
     </div>
-
-    <script>
-        function login() {
-            let username = document.getElementById("username").value;
-            let password = document.getElementById("password").value;
-            let message = document.getElementById("message");
-
-            if (username === "" || password === "") {
-                message.innerHTML = "Please enter username and password!";
-                message.style.color = "red";
-            } else {
-                message.innerHTML = "Welcome, " + username + "! 🌸";
-                message.style.color = "#845ec2";
-            }
-        }
-    </script>
 
 </body>
 </html>
